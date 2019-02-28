@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title — moja aplikacja platformy ASP.NET</title>
+    <title>@ViewBag.Title — Admin Zone</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
@@ -17,13 +17,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nazwa aplikacji", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <a href="/admin/dashboard" class="navbar-brand">Dashboard</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Strona główna", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Informacje", "About", "Home")</li>
-                    <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+                    <li><a href="/admin/pages">Pages</a></li>
+                    <li><a href="/admin/pages/EditSidebar">Sidebar</a></li>
+                    <li><a href="/admin/shop/Categories">Categories</a></li>
+                    <li><a href="/admin/shop/Products">Products</a></li>
+                    <li><a href="/admin/shop/Orders">Orders</a></li>
                 </ul>
             </div>
         </div>
@@ -32,12 +34,11 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year — moja aplikacja platformy ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year — Krzysztof Kaim</p>
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/scripts")
     @RenderSection("scripts", required: false)
 </body>
 </html>
