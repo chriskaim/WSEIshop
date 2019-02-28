@@ -1,4 +1,4 @@
-﻿@model WSEIShop.Models.ViewModels.Shop.ProductVM
+﻿@model WSEIshop.Models.ViewModels.Shop.ProductVM
 
 @{
     ViewBag.Title = "Edit Product";
@@ -23,10 +23,10 @@
     </div>
 }
 
-@using (Html.BeginForm("EditProduct", "Shop", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("EditProduct", "Shop", FormMethod.Post, new { enctype = "multipart/form-data" } ))
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -43,7 +43,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control" } )
                 @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -55,7 +55,7 @@
                 @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        
         <div class="form-group">
             <label class="control-label col-md-2" for="HasSidebar">Category</label>
             <div class="col-md-10">
@@ -88,7 +88,7 @@
 
 <hr />
 
-@if (!Model.GalleryImages.Any())
+@if (! Model.GalleryImages.Any())
 {
     <h3>There are no gallery images for this product.</h3>
 }
@@ -113,8 +113,8 @@
 <link href="~/Scripts/dropzone/dropzone.css" rel="stylesheet" />
 
 @section Scripts {
-    <script src="~/Scripts/dropzone/dropzone.js"></script>
-    <script>
+<script src="~/Scripts/dropzone/dropzone.js"></script>
+<script>
 
 $(function () {
 
@@ -188,6 +188,6 @@ $(function () {
 
 });
 
-    </script>
+</script>
 
 }

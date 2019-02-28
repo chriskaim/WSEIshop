@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace WSEIShop.Models.Data
+namespace WSEIshop.Models.Data
 {
     [Table("tblSidebar")]
     public class SidebarDTO

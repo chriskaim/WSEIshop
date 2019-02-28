@@ -1,5 +1,5 @@
-﻿using WSEIShop.Models.Data;
-using WSEIShop.Models.ViewModels.Shop;
+﻿using WSEIshop.Models.Data;
+using WSEIshop.Models.ViewModels.Shop;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,9 +8,9 @@ using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
 using PagedList;
-using WSEIShop.Areas.Admin.Models.ViewModels.Shop;
+using WSEIshop.Areas.Admin.Models.ViewModels.Shop;
 
-namespace WSEIShop.Areas.Admin.Controllers
+namespace WSEIshop.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class ShopController : Controller
@@ -160,7 +160,7 @@ namespace WSEIShop.Areas.Admin.Controllers
         public ActionResult AddProduct(ProductVM model, HttpPostedFileBase file)
         {
             // Check model state
-            if (!ModelState.IsValid)
+            if (! ModelState.IsValid)
             {
                 using (Db db = new Db())
                 {
@@ -213,10 +213,10 @@ namespace WSEIShop.Areas.Admin.Controllers
             var originalDirectory = new DirectoryInfo(string.Format("{0}Images\\Uploads", Server.MapPath(@"\")));
 
             var pathString1 = Path.Combine(originalDirectory.ToString(), "Products");
-            var pathString2 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString());
-            var pathString3 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Thumbs");
-            var pathString4 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Gallery");
-            var pathString5 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Gallery\\Thumbs");
+            var pathString2 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() );
+            var pathString3 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Thumbs" );
+            var pathString4 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Gallery" );
+            var pathString5 = Path.Combine(originalDirectory.ToString(), "Products\\" + id.ToString() + "\\Gallery\\Thumbs" );
 
             if (!Directory.Exists(pathString1))
                 Directory.CreateDirectory(pathString1);
@@ -240,11 +240,11 @@ namespace WSEIShop.Areas.Admin.Controllers
                 string ext = file.ContentType.ToLower();
 
                 // Verify extension
-                if (ext != "image/jpg" &&
-                    ext != "image/jpeg" &&
-                    ext != "image/pjpeg" &&
-                    ext != "image/gif" &&
-                    ext != "image/x-png" &&
+                if (ext != "image/jpg" && 
+                    ext != "image/jpeg" && 
+                    ext != "image/pjpeg" && 
+                    ext != "image/gif" && 
+                    ext != "image/x-png" && 
                     ext != "image/png")
                 {
                     using (Db db = new Db())
@@ -406,8 +406,7 @@ namespace WSEIShop.Areas.Admin.Controllers
             #region Image Upload
 
             // Check for file upload
-            if (file != null && file.ContentLength > 0)
-            {
+            if (file != null && file.ContentLength > 0) {
 
                 // Get extension
                 string ext = file.ContentType.ToLower();
@@ -508,7 +507,7 @@ namespace WSEIShop.Areas.Admin.Controllers
                 HttpPostedFileBase file = Request.Files[fileName];
 
                 // Check it's not null
-                if (file != null && file.ContentLength > 0)
+                if ( file != null && file.ContentLength > 0)
                 {
                     // Set directory paths
                     var originalDirectory = new DirectoryInfo(string.Format("{0}Images\\Uploads", Server.MapPath(@"\")));

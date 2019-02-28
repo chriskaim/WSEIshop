@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace WSEIShop.Models.Data
+namespace WSEIshop.Models.Data
 {
     public class Db : DbContext
     {
@@ -18,4 +18,4 @@ namespace WSEIShop.Models.Data
         public DbSet<OrderDTO> Orders { get; set; }
         public DbSet<OrderDetailsDTO> OrderDetails { get; set; }
     }
-} 
+}

@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace WSEIShop.Areas.Admin
+namespace WSEIshop.Areas.Admin
 {
     public class AdminAreaRegistration : AreaRegistration 
     {

@@ -1,4 +1,4 @@
-﻿using WSEIShop.Models.Data;
+﻿using WSEIshop.Models.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WSEIShop.Models.ViewModels.Pages
+namespace WSEIshop.Models.ViewModels.Pages
 {
     public class PageVM
     {
@@ -26,7 +26,7 @@ namespace WSEIShop.Models.ViewModels.Pages
 
         public int Id { get; set; }
         [Required]
-        [StringLength(50, MinimumLength = 3)]
+        [StringLength(50, MinimumLength =3)]
         public string Title { get; set; }
         public string Slug { get; set; }
         [Required]

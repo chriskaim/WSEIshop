@@ -1,11 +1,11 @@
-﻿using WSEIShop.Models.Data;
+﻿using WSEIshop.Models.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WSEIShop.Models.ViewModels.Account
+namespace WSEIshop.Models.ViewModels.Account
 {
     public class UserVM
     {

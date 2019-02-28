@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WSEIShop.Models.ViewModels.Account
+namespace WSEIshop.Models.ViewModels.Account
 {
     public class LoginUserVM
     {

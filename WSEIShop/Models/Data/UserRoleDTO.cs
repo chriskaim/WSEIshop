@@ -5,14 +5,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace WSEIShop.Models.Data
+namespace WSEIshop.Models.Data
 {
     [Table("tblUserRoles")]
     public class UserRoleDTO
     {
-        [Key, Column(Order = 0)]
+        [Key, Column(Order =0)]
         public int UserId { get; set; }
-        [Key, Column(Order = 1)]
+        [Key, Column(Order =1)]
         public int RoleId { get; set; }
 
         [ForeignKey("UserId")]

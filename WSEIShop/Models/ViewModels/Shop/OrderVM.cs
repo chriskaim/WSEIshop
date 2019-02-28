@@ -1,10 +1,10 @@
-﻿using WSEIShop.Models.Data;
+﻿using WSEIshop.Models.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WSEIShop.Models.ViewModels.Shop
+namespace WSEIshop.Models.ViewModels.Shop
 {
     public class OrderVM
     {

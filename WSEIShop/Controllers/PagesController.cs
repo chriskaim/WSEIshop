@@ -1,12 +1,12 @@
-﻿using WSEIShop.Models.Data;
-using WSEIShop.Models.ViewModels.Pages;
+﻿using WSEIshop.Models.Data;
+using WSEIshop.Models.ViewModels.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WSEIShop.Controllers
+namespace WSEIshop.Controllers
 {
     public class PagesController : Controller
     {
@@ -24,7 +24,7 @@ namespace WSEIShop.Controllers
             // Check if page exists
             using (Db db = new Db())
             {
-                if (!db.Pages.Any(x => x.Slug.Equals(page)))
+               if (! db.Pages.Any(x => x.Slug.Equals(page)))
                 {
                     return RedirectToAction("Index", new { page = "" });
                 }
@@ -55,7 +55,7 @@ namespace WSEIShop.Controllers
             // Return view with model
             return View(model);
         }
-
+        
         public ActionResult PagesMenuPartial()
         {
             // Declare a list of PageVM

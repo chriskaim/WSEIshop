@@ -1,5 +1,5 @@
-﻿using WSEIShop.Models.Data;
-using WSEIShop.Models.ViewModels.Shop;
+﻿using WSEIshop.Models.Data;
+using WSEIshop.Models.ViewModels.Shop;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WSEIShop.Controllers
+namespace WSEIshop.Controllers
 {
     public class ShopController : Controller
     {
@@ -70,7 +70,7 @@ namespace WSEIShop.Controllers
             using (Db db = new Db())
             {
                 // Check if product exists
-                if (!db.Products.Any(x => x.Slug.Equals(name)))
+                if (! db.Products.Any(x => x.Slug.Equals(name)))
                 {
                     return RedirectToAction("Index", "Shop");
                 }
