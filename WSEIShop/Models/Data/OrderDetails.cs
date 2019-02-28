@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace WSEIshop.Models.Data
+namespace WSEIShop.Models.Data
 {
     [Table("tblOrderDetails")]
     public class OrderDetailsDTO

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WSEIshop.Areas.Admin.Models.ViewModels.Shop
+namespace WSEIShop.Areas.Admin.Models.ViewModels.Shop
 {
     public class OrdersForAdminVM
     {

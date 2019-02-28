@@ -1,5 +1,5 @@
-﻿using WSEIshop.Models.Data;
-using WSEIshop.Models.ViewModels.Cart;
+﻿using WSEIShop.Models.Data;
+using WSEIShop.Models.ViewModels.Cart;
 using System;
 using System.Collections.Generic;
 using System.Linq;

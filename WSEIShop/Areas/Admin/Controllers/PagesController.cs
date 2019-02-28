@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WSEIshop.Models.Data;
+using WSEIShop.Models.Data;
 
 namespace WSEIShop.Areas.Admin.Controllers
 {

@@ -1,4 +1,4 @@
-﻿using WSEIshop.Models.Data;
+﻿using WSEIShop.Models.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WSEIshop.Models.ViewModels.Pages
+namespace WSEIShop.Models.ViewModels.Pages
 {
     public class PageVM
     {

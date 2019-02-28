@@ -1,5 +1,5 @@
-﻿using WSEIshop.Models.Data;
-using WSEIshop.Models.ViewModels.Shop;
+﻿using WSEIShop.Models.Data;
+using WSEIShop.Models.ViewModels.Shop;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,9 +8,9 @@ using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
 using PagedList;
-using WSEIshop.Areas.Admin.Models.ViewModels.Shop;
+using WSEIShop.Areas.Admin.Models.ViewModels.Shop;
 
-namespace WSEIshop.Areas.Admin.Controllers
+namespace WSEIShop.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class ShopController : Controller

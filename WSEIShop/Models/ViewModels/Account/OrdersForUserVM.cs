@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace WSEIshop.Models.ViewModels.Account
+namespace WSEIShop.Models.ViewModels.Account
 {
     public class OrdersForUserVM
     {

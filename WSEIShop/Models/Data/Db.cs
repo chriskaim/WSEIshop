@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace WSEIshop.Models.Data
+namespace WSEIShop.Models.Data
 {
     public class Db : DbContext
     {
